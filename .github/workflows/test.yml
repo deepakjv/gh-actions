@@ -15,7 +15,7 @@ jobs:
       - name: Check Kernel Version
         run: uname -r
       - name: Output github context
-        run: echo "{{toJSON(github)}}"
+        run: echo "{{ toJSON(github) }}"
   test1:
     needs: [test]
     runs-on: ubuntu-latest
