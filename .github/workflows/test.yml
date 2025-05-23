@@ -14,3 +14,17 @@ jobs:
         run: dpkg -l
       - name: Check Kernel Version
         run: uname -r
+  test1:
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+      - name: InstallNodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Check Packages Installed
+        run: dpkg -l
+      - name: Check Kernel Version
+        run: uname -r
