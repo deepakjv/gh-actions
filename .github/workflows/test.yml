@@ -11,6 +11,6 @@ jobs:
         with:
           node-version: 18
       - name: Check Packages Installed
-        run: rpm -qa
+        run: dpkg -l
       - name: Check Kernel Version
         run: uname -r
