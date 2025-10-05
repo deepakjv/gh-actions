@@ -30,8 +30,8 @@ jobs:
         with:
           name: my-artifacts
           path: |
-            dist
             package.json
+            test
 
   deploy:
     needs: build
